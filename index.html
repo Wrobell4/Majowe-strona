@@ -330,8 +330,23 @@
         });
         
         if (response.ok) {
-          // Przekierowanie na Instagram po pomyślnym wysłaniu
-          window.location.href = 'https://www.instagram.com/majowe_chwile/';
+          // Wyświetl komunikat sukcesu
+          const successMessage = document.querySelector('.rl-success-message');
+          if (successMessage) {
+            const successText = successMessage.querySelector('.rl-success-text');
+            if (successText) {
+              successText.textContent = 'Wiadomość została wysłana! Przekierowanie...';
+            }
+            successMessage.style.display = 'block';
+          }
+          
+          // Ukryj formularz
+          form.style.display = 'none';
+          
+          // Odczekaj 2 sekundy przed przekierowaniem
+          setTimeout(function() {
+            window.location.href = 'https://www.instagram.com/majowe_chwile/';
+          }, 2000);
         } else {
           // Obsługa błędu
           const errorMessage = document.querySelector('.rl-error-message');
