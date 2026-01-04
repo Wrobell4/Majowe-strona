@@ -340,10 +340,39 @@ p {
   
   .oferta-slider-wrapper {
     display: block;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 1rem;
+  }
+  
+  .oferta-slider-container {
+    display: flex;
+    overflow: visible;
+    transition: none;
+  }
+  
+  .oferta-slide {
+    scroll-snap-align: center;
+    min-width: 85%;
+    padding: 0 0.5rem;
+    flex-shrink: 0;
   }
   
   .oferta-card {
     padding: 1.5rem 1rem;
+  }
+  
+  /* Ukryj przyciski nawigacji slidera na mobile */
+  .oferta-slider-nav {
+    display: none;
+  }
+  
+  /* Przycisk Inspiracje - hover na mobile */
+  .hollow-button:hover {
+    color: #a87955;
+    border-color: #a87955;
   }
 }
 
@@ -1900,7 +1929,7 @@ p {
   }
 
   .hamburger-button.w--open, .navigation-menu {
-    background-color: #3b99d9;
+    background-color: rgba(194, 147, 96, 0.54);
   }
 
   .white-box {
@@ -2149,7 +2178,38 @@ p {
   }
 
   .brand-text {
-    margin-left: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  
+  .div-block {
+    position: relative;
+  }
+  
+  .div-block img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .container {
+    padding-left: 5px;
+    margin-right: 0;
+  }
+  
+  .brand-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+  
+  .navigation-bar {
+    padding-bottom: 0;
+  }
+  
+  .hamburger-button {
+    padding-right: 10px;
   }
 
   .white-box {
