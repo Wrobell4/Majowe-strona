@@ -167,8 +167,12 @@ p {
   z-index: 1000;
   background-color: #fff;
   padding-bottom: 0;
-  position: relative;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .navigation-menu {
@@ -195,9 +199,152 @@ p {
 
 .ofertadekoracji {
   text-align: center;
-  background-color: #fff;
+  background-color: #f5f5f5;
   padding: 80px 10px;
   position: relative;
+}
+
+.ofertadekoracji .w-container {
+  max-width: 1240px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.oferta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+}
+
+.oferta-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.oferta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.oferta-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.oferta-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.oferta-card-title {
+  color: #2d3748;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.oferta-card-text {
+  color: #718096;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Slider dla mobile */
+.oferta-slider-wrapper {
+  display: none;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.oferta-slider-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.oferta-slide {
+  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.oferta-slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.oferta-slider-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(194, 147, 96, 0.54);
+  background-color: #ffffff;
+  color: rgba(194, 147, 96, 0.54);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.oferta-slider-btn:hover {
+  background-color: rgba(194, 147, 96, 0.54);
+  color: #ffffff;
+}
+
+.oferta-slider-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 991px) {
+  .oferta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .oferta-grid {
+    display: none;
+  }
+  
+  .oferta-slider-wrapper {
+    display: block;
+  }
+  
+  .oferta-card {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .ofertadekoracji.accent {
@@ -362,8 +509,8 @@ p {
 .stopka {
   color: #333;
   background-color: rgba(219, 166, 107, 0.25);
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .stopka.center {
@@ -432,6 +579,12 @@ p {
   padding-left: 0;
   padding-right: 0;
   box-shadow: 0 5px 15px #0000001a;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.zdjeciainspiracje:hover {
+  transform: scale(1.05);
 }
 
 .oautorach {
@@ -1573,6 +1726,7 @@ p {
   text-decoration: none;
   transition: background-color .3s;
   display: inline-block;
+  border: none;
 }
 
 .kontaktwhatsapp:hover {
@@ -1732,7 +1886,7 @@ p {
   }
 
   .kontaktwhatsapp {
-    border: 1px solid #69b9ff;
+    border: none;
   }
 }
 
