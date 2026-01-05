@@ -161,6 +161,7 @@ p {
   margin-top: 0;
   margin-right: 10px;
   padding-top: 25px;
+  color: #a87955 !important;
 }
 
 .navigation-bar {
@@ -1929,7 +1930,7 @@ p {
   }
 
   .navigation-link.w--current {
-    color: #fff;
+    color: #a87955 !important;
   }
 
   .hamburger-button.w--open, .navigation-menu {
