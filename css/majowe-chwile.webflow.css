@@ -2084,7 +2084,7 @@ p {
   }
 
   .sekcjazfilmikiem.centered {
-    margin-top: 60px;
+    margin-top: 0;
     padding-top: 119px;
     padding-bottom: 119px;
   }
@@ -2324,7 +2324,7 @@ p {
   }
 
   .sekcjazfilmikiem.centered {
-    margin-top: 50px;
+    margin-top: 0;
     padding-top: 60px;
     padding-bottom: 60px;
   }
