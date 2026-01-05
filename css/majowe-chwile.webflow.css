@@ -154,7 +154,7 @@ p {
 }
 
 .navigation-link:hover {
-  color: #2e9dff;
+  color: #a87955;
 }
 
 .navigation-link.w--current {
@@ -469,8 +469,8 @@ p {
 }
 
 .hollow-button:hover {
-  color: #2e9dff;
-  border-color: #2e9dff;
+  color: #a87955;
+  border-color: #a87955;
 }
 
 .hollow-button.all-caps {
@@ -1924,12 +1924,21 @@ p {
     color: #ffffff85;
   }
 
+  .navigation-link:hover {
+    color: #a87955;
+  }
+
   .navigation-link.w--current {
     color: #fff;
   }
 
   .hamburger-button.w--open, .navigation-menu {
     background-color: rgba(194, 147, 96, 0.54);
+  }
+  
+  .brand-text {
+    font-size: 20px;
+    line-height: 22px;
   }
 
   .white-box {
@@ -2007,6 +2016,60 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  /* Usuń białą przestrzeń nad navigation bar na mobile */
+  body {
+    padding-top: 0 !important;
+  }
+  
+  /* Mobile Navigation - logo, napis i menu w jednej linii */
+  .navigation-bar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  .container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px !important;
+    min-height: auto !important;
+  }
+  
+  .div-block {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+  }
+  
+  .div-block img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+  
+  .brand-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .brand-text {
+    margin: 0 !important;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  
+  .hamburger-button {
+    margin-left: auto;
+    padding: 8px !important;
+  }
+  
   .kontaktbutton.full-width {
     margin-left: auto;
     margin-right: auto;
@@ -2021,6 +2084,7 @@ p {
   }
 
   .sekcjazfilmikiem.centered {
+    margin-top: 60px;
     padding-top: 119px;
     padding-bottom: 119px;
   }
@@ -2032,6 +2096,25 @@ p {
 
   .hero-subheading {
     font-size: 18px;
+  }
+  
+  /* Przyciski kategorii w sekcji Inspiracje - 2 wiersze po 3 */
+  .tab-menu {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    gap: 8px;
+    padding: 0 10px;
+  }
+  
+  .tabs-copy.tab {
+    flex: 0 0 calc(33.333% - 12px);
+    width: calc(33.333% - 12px);
+    min-width: 90px;
+    font-size: 11px;
+    padding: 10px 8px;
+    margin: 4px;
   }
 
   .form-field.text-area {
@@ -2129,10 +2212,6 @@ p {
     margin-right: auto;
   }
 
-  .tabs-copy.tab {
-    font-size: 12px;
-  }
-
   .rl-padding-section-large {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -2169,47 +2248,63 @@ p {
 }
 
 @media screen and (max-width: 479px) {
+  /* Usuń białą przestrzeń nad navigation bar na mobile */
+  body {
+    padding-top: 0 !important;
+  }
+  
   .kontaktbutton {
     margin-bottom: 25px;
   }
 
   .navigation-bar {
     position: relative;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
-  .brand-text {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 16px;
-    line-height: 18px;
+  /* Mobile Navigation - wszystko w jednej linii */
+  .container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 6px !important;
+    min-height: auto !important;
   }
   
   .div-block {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    margin-right: 8px;
+    padding: 0;
   }
   
   .div-block img {
     width: 50px;
     height: auto;
-  }
-  
-  .container {
-    padding-left: 5px;
-    margin-right: 0;
+    display: block;
+    margin: 0;
   }
   
   .brand-link {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   
-  .navigation-bar {
-    padding-bottom: 0;
+  .brand-text {
+    margin: 0 !important;
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
   }
   
   .hamburger-button {
-    padding-right: 10px;
+    padding: 6px !important;
+    margin-left: auto;
   }
 
   .white-box {
@@ -2229,6 +2324,7 @@ p {
   }
 
   .sekcjazfilmikiem.centered {
+    margin-top: 50px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -2242,9 +2338,21 @@ p {
   }
 
   .tab-menu {
-    flex-flow: row;
+    flex-flow: row wrap;
     display: flex;
-    overflow: auto;
+    justify-content: center;
+    overflow: visible;
+    gap: 6px;
+    padding: 0 5px;
+  }
+  
+  .tabs-copy.tab {
+    flex: 0 0 calc(33.333% - 10px);
+    width: calc(33.333% - 10px);
+    min-width: 80px;
+    font-size: 10px;
+    padding: 8px 4px;
+    margin: 3px;
   }
 
   .zdjeciainspiracje {
