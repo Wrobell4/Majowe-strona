@@ -250,9 +250,12 @@ p {
   flex-shrink: 0;
 }
 
-.oferta-icon svg {
+.oferta-icon svg,
+.oferta-icon img {
   width: 48px;
   height: 48px;
+  object-fit: contain;
+  display: block;
 }
 
 .oferta-card-title {
