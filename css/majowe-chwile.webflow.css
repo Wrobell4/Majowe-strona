@@ -673,6 +673,26 @@ p {
   padding-bottom: 25px;
 }
 
+/* Style dla wszystkich linków w stopce */
+.stopka a,
+.stopka .footer-link {
+  color: #a87955 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.stopka a:hover,
+.stopka .footer-link:hover {
+  color: rgba(194, 147, 96, 0.54) !important;
+}
+
+.stopka a:active,
+.stopka a:visited,
+.stopka .footer-link:active,
+.stopka .footer-link:visited {
+  color: #a87955 !important;
+}
+
 .stopka.center {
   text-align: center;
   background-color: #383838;
@@ -703,7 +723,7 @@ p {
 }
 
 .footer-link {
-  color: #668cad;
+  color: #a87955 !important;
   border-bottom: 1px solid #d5d5e0;
   margin-bottom: 6px;
   padding-bottom: 10px;
@@ -711,10 +731,16 @@ p {
   font-weight: 300;
   text-decoration: none;
   display: block;
+  transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #008cffd6;
+  color: rgba(194, 147, 96, 0.54) !important;
+}
+
+.footer-link:active,
+.footer-link:visited {
+  color: #a87955 !important;
 }
 
 .footer-link.with-icon {
