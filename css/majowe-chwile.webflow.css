@@ -666,6 +666,38 @@ p {
   height: 110px;
 }
 
+/* Sekcja Google Reviews */
+.google-reviews-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #ffffff;
+}
+
+.google-reviews-wrapper {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Elfsight widget styling */
+.elfsight-app-b2b0f656-cb0d-4e82-bc8e-35facd802e14 {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Responsywność dla sekcji Google Reviews */
+@media screen and (max-width: 767px) {
+  .google-reviews-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .google-reviews-wrapper {
+    margin-top: 2rem;
+  }
+}
+
 .stopka {
   color: #333;
   background-color: rgba(219, 166, 107, 0.25);
