@@ -1,0 +1,33 @@
+# Majowe Chwile - robots.txt
+# Pozwalamy na indeksowanie przez wszystkie boty
+
+User-agent: *
+Allow: /
+
+# Boty AI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap
+Sitemap: https://www.majowechwile.pl/sitemap.xml
